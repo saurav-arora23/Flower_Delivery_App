@@ -16,7 +16,7 @@ class _MseState extends State<Mse> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.white,
-        title: Text('Login Page'),
+        title: const Text('Login Page'),
         centerTitle: true,
         leading: Container(),
       ),

@@ -37,14 +37,14 @@ class _ProductScreenState extends State<ProductScreen> {
         },
         body: body);
 
-    print(body);
+    debugPrint('$body');
 
     if (response.statusCode == 200) {
       var json = jsonDecode(response.body);
-      print(json);
+      debugPrint('$json');
       return json;
     } else {
-      print("error in calling payment intent");
+      debugPrint("error in calling payment intent");
     }
   }
 
@@ -113,7 +113,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   backgroundColor: Colors.green,
                 ));
               } catch (e) {
-                print("payment sheet failed");
+                debugPrint("payment sheet failed");
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text(
                     "Payment Failed",
